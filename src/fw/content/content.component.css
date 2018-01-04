@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-grow: 1;
+    background-image: url('../../assets/Background.jpg'); 
+    background-position:  center center;
+    background-size: cover;
+}
+
+.body-style {
+    padding: 20px;
+    flex-grow: 1;
+    overflow: auto;
+}

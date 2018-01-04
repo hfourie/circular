@@ -1,0 +1,31 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.dashboardBox{
+    border: 1px solid white;
+    width: 250px;
+    height: 250px;
+    margin:10px;
+    text-align: center;
+    padding-top:45px;
+    background-color:#7c7c7c;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.dashboardBox:hover{
+    width: 290px;
+    height: 290px;
+    margin:-10px;
+
+-webkit-box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+
+}
+

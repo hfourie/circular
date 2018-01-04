@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+.box{
+    background-color: olive;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    float: left;
+}
+
+.box:hover{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.bigbox {
+    width: 200px;
+    height: 200px;
+}
