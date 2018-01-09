@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
 import { HomeContentComponent } from './home-content/home-content.component';
+import { MultimediaContainerComponent } from './multimedia/multimedia-container/multimedia-container.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
 import { RegisterUserComponent } from '../fw/users/register-user/register-user.component';
@@ -17,6 +18,7 @@ export const appRoutes: Routes = [
         children: [
           { path: '', redirectTo: 'home-content', pathMatch: 'full' },
           { path: 'home-content', component: HomeContentComponent },
+          { path: 'multimedia', component: MultimediaContainerComponent },
           { path: 'settings', component: SettingsComponent },
         ] }
     ] },

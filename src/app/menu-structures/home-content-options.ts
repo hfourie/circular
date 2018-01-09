@@ -19,7 +19,7 @@ export let homeContentOptions: Array<HomeContentOption> = [
     {
         option: 'Media',
         icon: 'glyphicon-music',
-        route: 'authenticated/dashboard'
+        route: 'authenticated/multimedia'
     },
     {
         option: 'Settings',

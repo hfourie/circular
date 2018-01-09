@@ -1,11 +1,12 @@
 <div *screenLarge>
   <div class="home-content-option">
-    <span class="glyphicon {{ item.icon }}"></span>
+    <span routerLink="/{{ item.route }}" class="glyphicon {{ item.icon }}">
+    </span>
   </div>
 </div>
 
 <div *screenBelowLarge>
     <div class="home-content-option-small">
-      <span class="glyphicon {{ item.icon }}"></span>
+      <span routerLink="/{{ item.route }}" class="glyphicon {{ item.icon }}"></span>
     </div>
 </div>

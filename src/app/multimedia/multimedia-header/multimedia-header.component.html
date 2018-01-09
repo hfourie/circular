@@ -1,0 +1,22 @@
+<header class="header">
+
+    <ul class="header__actions">
+        <li>
+            <input type='radio' value='soundCloud' name='radio' id='soundCloud' checked />
+            <label for='soundCloud' class="icn fa fa-soundcloud" aria-hidden="true"></label>
+        </li>
+        <li>
+            <input type='radio' value='appleMusic' name='radio' id='appleMusic' />
+            <label for='appleMusic' class="icn fa fa-apple" aria-hidden="true"></label>
+        </li>
+        <li>
+            <span class="icn glyphicon glyphicon-search" (click)="toggleOpen()"></span>
+        </li>
+    </ul>
+    <!-- <div>PLAYER TYPE</div> -->
+    <!-- <div>PLAYER</div> -->
+<div class="clearfix"></div>
+    <app-multimedia-search-bar [open]="open"></app-multimedia-search-bar>
+
+</header>
+

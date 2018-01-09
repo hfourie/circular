@@ -9,11 +9,12 @@ app.on('ready', function () {
   win = new BrowserWindow({
       width: 1000, 
       height: 600,
-      frame: false,
+      frame: true,
     });
 
   // Specify entry point
   win.loadURL('http://localhost:4200');
+  //win.loadURL('file://${__dirname}/app/app.component.html')
 
   // Show dev tools
   // Remove this line before distributing
@@ -24,7 +25,7 @@ app.on('ready', function () {
     win = null;
   });
 
-  win.setFullScreen(true);
+  //win.setFullScreen(true);
 
 });
 

@@ -1,15 +1,22 @@
+//Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FwModule } from '../fw/fw.module';
+import { MultimediaModule } from './multimedia/multimedia.module';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+
+//Components
 import { AppComponent } from './app.component';
-import { FwModule } from '../fw/fw.module';
 import { SettingsComponent } from './settings/settings.component';
-import { appRoutes } from './app.routing';
-import{HomeContentComponent} from './home-content/home-content.component';
+import { HomeContentComponent} from './home-content/home-content.component';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
+//Routes
+import { appRoutes } from './app.routing';
+
+//API
 import { UserApi } from '../fw/users/user-api';
 
 //Services
@@ -38,6 +45,7 @@ import { ImagePanelComponent } from './panels/image-panel/image-panel.component'
     FormsModule,
     HttpModule,
     FwModule,
+    MultimediaModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

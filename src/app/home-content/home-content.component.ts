@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { homeContentOptions } from '../menu-structures/home-content-options'
 import { HomeContentService } from '../services/home-content.service';
 import { Howl } from 'howler'
+//import { SiriWave } from 'siriwavejs'
 
 @Component({
   selector: 'app-home-content',
@@ -23,6 +24,7 @@ export class HomeContentComponent {
 
     sound.play();
 
-  }
+  };
+
 }
 
