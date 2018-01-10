@@ -1,8 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
-
+import { FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 import { UserApi } from '../user-api';
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
 
 @Component({
   selector: 'fw-sign-in',
@@ -10,6 +18,18 @@ import { UserApi } from '../user-api';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
+  validationformControl = new FormControl('', [
+    Validators.required,
+  ]);
+
+  matcher = new MyErrorStateMatcher();
+
 
   formError: string;
   submitting = false;
@@ -24,6 +44,8 @@ export class SignInComponent {
       console.log('submitting...', signInForm);
       this.submitting = true;
       this.formError = null;
+
+      console.log(signInForm.value.username, signInForm.value.password, signInForm.value.rememberMe);
 
       this.userApi.signIn(signInForm.value.username, signInForm.value.password, signInForm.value.rememberMe)
         .subscribe((data) => {

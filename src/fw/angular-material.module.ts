@@ -1,16 +1,72 @@
 import { NgModule } from '@angular/core';
-import { MatCheckboxModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material';
-import { MatFormFieldModule } from '@angular/material';
-import { MatInputModule } from '@angular/material';
+
+import {
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatStepperModule,
+  } from '@angular/material';
 
 @NgModule({
     exports: [
-        MatCheckboxModule,
-        MatCheckboxModule,
+        MatAutocompleteModule,
         MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatStepperModule,
     ]
   })
   export class AngularMaterialModule { }
