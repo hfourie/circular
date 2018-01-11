@@ -13,7 +13,7 @@
     margin:10px;
     text-align: center;
     padding-top:45px;
-    background-color:#7c7c7c;
+    background: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     opacity: 0.9;
 }

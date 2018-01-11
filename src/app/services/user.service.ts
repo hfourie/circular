@@ -32,7 +32,7 @@ export class UserService implements UserApi {
     return Observable.of({
       authenticated:this.isAuthenticated,
       errorMessage: this.error
-    }).delay(4000);
+    }).delay(3000);
     // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Invalid User Name and/or Password'));
   }
 

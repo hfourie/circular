@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-image: url('../../../assets/WelcomeScreen/wallhaven-7589.jpg');  
+    background-image: url('../../../assets/WelcomeScreen/wallhaven-438352.jpg');  
     background-position:  center center;
     background-size: cover;
 }
@@ -17,8 +17,8 @@
 }
 
 .sign-in-form img {
-    width: 300px;
-    display : block;
+    width: 70px;
+    display : inline;
     margin : auto;
     -webkit-animation: rotation 10s infinite linear;
 }
@@ -78,9 +78,15 @@ input:focus{
     height: 1px !important;
     margin-bottom: 10px !important;
     background-color: transparent !important;
+    width: 70%;
 }
 .progress-bar{
     background-color:  #c40105 !important;
-    
+}
+.progress-bar-percentage-container{
+    float:right
+}
+.progress-bar-percentage-container span{
+    float:right; margin-top:-10px
 }
 

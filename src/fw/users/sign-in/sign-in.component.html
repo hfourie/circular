@@ -1,18 +1,22 @@
 
 <div class="sign-in-form">
-  <img *ngIf="accessGranted" id="loading" src="../../../assets/Logo/circular.png" />
-  <div *ngIf="!accessGranted" class="container">
-    <div *ngIf="accessDenied" class="form-group">
+  
+  <div class="acces">
+    <img *ngIf="processing" id="loading" src="../../../assets/Logo/circular.png" />
+    <span *ngIf="processing">Processing....</span>
+    <span *ngIf="accessGranted">ACCESS GRANTED</span>
+  </div>
+  <div *ngIf="login" class="container">
+    <div class="form-group">
       <input class="form-control" name="password" (keyup)="validate()" placeholder="Password" [(ngModel)]="user.password"/>
     </div>
-    <div *ngIf="accessDenied" class="progress">
+    <div class="progress-bar-percentage-container">
+      <span>{{percentage}}</span>
+    </div>
+    <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
         [style.width]="percentage">
         </div>
       </div>
-    <div class="acces">
-      <span *ngIf="accessDenied">ACCESS DENIED</span>
-      <span *ngIf="!accessDenied">ACCESS GRANTED</span>
-    </div>
   </div>
 </div>

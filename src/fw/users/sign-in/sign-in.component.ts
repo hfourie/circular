@@ -4,6 +4,7 @@ import { FormControl, FormGroupDirective, NgForm, Validators} from '@angular/for
 import { ErrorStateMatcher } from '@angular/material/core';
 import { UserComponent } from '../user.component';
 import { UserApi } from '../user-api';
+import { Howl } from 'howler'
 
 @Component({
   selector: 'fw-sign-in',
@@ -16,20 +17,29 @@ export class SignInComponent {
   public rememberMe = false;
   private show = false;
 
-  formError: string;
-  submitting = false;
   constructor(private userApi: UserApi,
               private router:Router) { }
 
  percentage: string
  password = 'H@lcyon60*';
- accessDenied = true;
  accessGranted = false;
+ processing = false;
+ login = true;
  
   validate(){
+
+    var sound = new Howl({
+      src: ['../../../assets/Themes/Sounds/water-drop-1.wav'],
+      loop: false,
+      volume: 0.1,
+      html5 :true
+    });
+    sound.stop();
+    sound.play();
+
     if(this.password === this.user.password){
-      this.accessDenied = false; 
-      this.stateChange(-1);
+      var _this = this;
+      this.stateChange(-1, this);
     }
     else{
       var x = this.password.substring(0,this.user.password.length)
@@ -39,31 +49,26 @@ export class SignInComponent {
     }
   }
 
-   stateChange(newState) {
-    var _this = this;
+   stateChange(newState, _this) {
     setTimeout(function () {
         if (newState == -1) {
-
-            //display logo
-            //hide grant access
-            _this.accessGranted = !_this.accessGranted;
-        
+          _this.login = false;
+            _this.processing = true;
             _this.userApi.signIn(_this.user, false)
                 .subscribe((data) => {
-                    this.submitting = false;
-                    this.formError = data.errorMessage;
-                    if(data.authenticated){
-                      this.router.navigate(['/authenticated']);
-                    }
+                  _this.accessGranted = true;
+                  _this.processing = false;
+                  setTimeout(function () {
+                    _this.router.navigate(['/authenticated']);
+                  }, 1000);
+
+                      
                   },
                   (err)=> {
-                    this.submitting = false;
-                    console.log('got error: ', err);
-                    this.formError = err;
                   }
                 );
         }
-    }, 5000);
+    }, 1);
 }
   
 
