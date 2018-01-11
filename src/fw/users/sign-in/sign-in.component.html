@@ -1,47 +1,21 @@
 
-<form class="example-form">
-
-</form>
-  
-
 <div class="sign-in-form">
-  <img src="./assets/logo.png" width="320" />
+  <!-- <img src="./assets/Logo/circular.png" /> -->
   <h4>Sign In</h4>
   <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)" novalidate>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="User Name" [formControl]="emailFormControl" 
-      [errorStateMatcher]="matcher" name="username"/>
-      <mat-hint>Example user@domain.com</mat-hint>
-      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Please enter a valid email address
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
+      <input  name="username" class="md-input-container" required matInput placeholder="Username"  [(ngModel)]="user.username"/>
+      <mat-error [hidden]="user.username.pristine || user.username.valid">
+      Username is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Password" [formControl]="validationformControl" 
-      [errorStateMatcher]="matcher" name="password"/>
-      <mat-error *ngIf="validationformControl.hasError('required')">
+      <input name="password" required type="password" matInput placeholder="Password" [(ngModel)]="user.password"/>
+      <mat-error [hidden]="user.password.valid || user.password.pristine">
         Password is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-
-    <!-- <div class="form-group">
-      <input class="form-control" name="password" required type="password"  placeholder="Password" ngModel #password="ngModel"/>
-      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
-        Password is required.
-      </div>
-    </div> -->
-
     <mat-checkbox name="rememberMe">Remember Me!</mat-checkbox>
-
-    <!-- <div class="checkbox">
-      <label>
-      <input type="checkbox" name="rememberMe" ngModel /> Remember Me
-      </label>
-    </div> -->
     <div *ngIf="formError" class="alert alert-danger">
       {{ formError }}
     </div>

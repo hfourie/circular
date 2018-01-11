@@ -1,7 +1,8 @@
 import { Observable } from 'rxjs/Observable';
+import { UserComponent } from './user.component';
 
 export abstract class UserApi {
-    signIn : (username: string, password: string, rememberMe: boolean) => Observable<any>;
+    signIn : (user, rememberMe: boolean) => Observable<any>;
     signOut : () => Observable<any>;
     // changePassword : 
 }

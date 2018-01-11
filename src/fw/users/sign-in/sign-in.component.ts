@@ -1,35 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { UserComponent } from '../user.component';
 import { UserApi } from '../user-api';
-
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
-
 
 @Component({
   selector: 'fw-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent {
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
-
-  validationformControl = new FormControl('', [
-    Validators.required,
-  ]);
-
-  matcher = new MyErrorStateMatcher();
-
+  public user = new UserComponent('','');
+  public rememberMe = false;
+  private show = false;
 
   formError: string;
   submitting = false;
@@ -45,12 +30,13 @@ export class SignInComponent {
       this.submitting = true;
       this.formError = null;
 
-      console.log(signInForm.value.username, signInForm.value.password, signInForm.value.rememberMe);
-
-      this.userApi.signIn(signInForm.value.username, signInForm.value.password, signInForm.value.rememberMe)
+      this.userApi.signIn(this.user, this.rememberMe)
         .subscribe((data) => {
-            console.log('got valid: ', data);
-            this.router.navigate(['/authenticated']);
+            this.submitting = false;
+            this.formError = data.errorMessage;
+            if(data.authenticated){
+              this.router.navigate(['/authenticated']);
+            }
           },
           (err)=> {
             this.submitting = false;

@@ -15,6 +15,7 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ScreenService } from './services/screen.service';
 import { ScreenLarge } from './directives/screen-large.directive';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
+import { ShowHideInput } from './directives/show-hide.directive';
 import { MenuService } from './services/menu.service';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
@@ -24,6 +25,41 @@ import { RegisterUserComponent } from './users/register-user/register-user.compo
 import { DynamicFormComponent } from './dynamic-forms/dynamic-form/dynamic-form.component';
 import { DynamicFieldComponent } from './dynamic-forms/dynamic-field/dynamic-field.component';
 import { PanelComponent } from './panels/panel/panel.component';
+import { UserComponent } from './users/user.component';
+
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule
+} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -32,7 +68,37 @@ import { PanelComponent } from './panels/panel/panel.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatStepperModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -42,6 +108,7 @@ import { PanelComponent } from './panels/panel/panel.component';
     StatusBarComponent,
     ScreenLarge,
     ScreenBelowLarge,
+    ShowHideInput,
     MenuComponent,
     MenuItemComponent,
     PopupMenuComponent,
@@ -49,7 +116,8 @@ import { PanelComponent } from './panels/panel/panel.component';
     RegisterUserComponent,
     DynamicFormComponent,
     DynamicFieldComponent,
-    PanelComponent
+    PanelComponent,
+    UserComponent
   ],
   providers: [
     FrameworkConfigService,
@@ -61,7 +129,8 @@ import { PanelComponent } from './panels/panel/panel.component';
     DynamicFormComponent,
     PanelComponent,
     ScreenLarge,
-    ScreenBelowLarge
+    ScreenBelowLarge,
+    UserComponent
   ]
 })
 export class FwModule { }

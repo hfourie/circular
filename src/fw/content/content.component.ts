@@ -15,6 +15,9 @@ export class ContentComponent implements OnInit {
   // constructor(private menuService: MenuService,
   //             private screenService: ScreenService) { }
 
+
+  private imageUrl = '../../assets/Background.jpg';
+
   constructor() { }
 
   ngOnInit() {
