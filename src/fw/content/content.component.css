@@ -1,7 +1,7 @@
 :host {
     display: flex;
     flex-grow: 1;
-    /* background-image: url('../../assets/Background.jpg');  */
+    background-image: url('../../assets/Themes/Background.jpg'); 
     background-position:  center center;
     background-size: cover;
 }
@@ -10,4 +10,6 @@
     padding: 20px;
     flex-grow: 1;
     overflow: auto;
+    background-position:  center center;
+    background-size: cover;
 }

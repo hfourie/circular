@@ -4,7 +4,7 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-image: url('../../../assets/Background.jpg');  
+    background-image: url('../../../assets/Themes/Background.jpg');  
     background-position:  center center;
     background-size: cover;
 }

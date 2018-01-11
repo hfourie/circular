@@ -7,7 +7,8 @@ import { retry } from 'rxjs/operators/retry';
 
 var users = [
   new UserComponent('hardus@gmail.com','H@lcyon60*'),
-  new UserComponent('admin1','admin1')
+  new UserComponent('admin1','admin1'),
+  new UserComponent('1','1')
 ];
 
 @Injectable()
@@ -31,7 +32,7 @@ export class UserService implements UserApi {
     return Observable.of({
       authenticated:this.isAuthenticated,
       errorMessage: this.error
-    }).delay(2000);
+    }).delay(4000);
     // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Invalid User Name and/or Password'));
   }
 

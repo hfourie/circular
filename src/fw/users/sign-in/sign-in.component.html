@@ -1,30 +1,18 @@
 
 <div class="sign-in-form">
-  <!-- <img src="./assets/Logo/circular.png" /> -->
-  <h4>Sign In</h4>
-  <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)" novalidate>
-    <mat-form-field class="example-full-width">
-      <input  name="username" class="md-input-container" required matInput placeholder="Username"  [(ngModel)]="user.username"/>
-      <mat-error [hidden]="user.username.pristine || user.username.valid">
-      Username is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input name="password" required type="password" matInput placeholder="Password" [(ngModel)]="user.password"/>
-      <mat-error [hidden]="user.password.valid || user.password.pristine">
-        Password is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-    <mat-checkbox name="rememberMe">Remember Me!</mat-checkbox>
-    <div *ngIf="formError" class="alert alert-danger">
-      {{ formError }}
+  <img *ngIf="accessGranted" id="loading" src="../../../assets/Logo/circular.png" />
+  <div *ngIf="!accessGranted" class="container">
+    <div *ngIf="accessDenied" class="form-group">
+      <input class="form-control" name="password" (keyup)="validate()" placeholder="Password" [(ngModel)]="user.password"/>
     </div>
-    <div *ngIf="!submitting">
-      <a routerLink="/register">Register</a>
-      <button type="submit" class="btn btn-primary">Sign In</button>
+    <div *ngIf="accessDenied" class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+        [style.width]="percentage">
+        </div>
+      </div>
+    <div class="acces">
+      <span *ngIf="accessDenied">ACCESS DENIED</span>
+      <span *ngIf="!accessDenied">ACCESS GRANTED</span>
     </div>
-    <div *ngIf="submitting">
-      <p class="message">Signing In...</p>
-    </div>
-  </form>
+  </div>
 </div>

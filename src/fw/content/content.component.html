@@ -6,6 +6,8 @@
     class="vertical-menu">
 </fw-menu> -->
 
-<div class="body-style" style="background-image: url({{imageUrl}});">
+<!-- style="background-image: url({{imageUrl}});" -->
+
+<div class="body-style" [style.background-image]="backgroundImg" >
     <router-outlet></router-outlet>
 </div>
