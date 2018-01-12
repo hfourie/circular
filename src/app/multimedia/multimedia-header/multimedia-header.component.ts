@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MultimediaHeaderComponent {
   open = false;
   
+  route: 'authenticated/settings';
+
   constructor() { }
 
   toggleOpen(): void {

@@ -15,14 +15,14 @@ export class HomeContentComponent {
   constructor(private homeContentService: HomeContentService) { 
     homeContentService.items = homeContentOptions;
 
-    var sound = new Howl({
-      src: ['../../assets/multimedia/music/Alicks-Abandoned.mp3'],
-      loop: true,
-  volume: 0.1,
-      html5 :true
-    });
+  //   var sound = new Howl({
+  //     src: ['../../assets/multimedia/music/Alicks-Abandoned.mp3'],
+  //     loop: true,
+  // volume: 0.1,
+  //     html5 :true
+  //   });
 
-    sound.play();
+  //   sound.play();
 
   };
 

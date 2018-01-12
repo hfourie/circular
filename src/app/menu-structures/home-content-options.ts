@@ -24,6 +24,6 @@ export let homeContentOptions: Array<HomeContentOption> = [
     {
         option: 'Settings',
         icon: 'glyphicon-cog',
-        route: 'authenticated/dashboard'
+        route: 'authenticated/settings'
     }
 ];

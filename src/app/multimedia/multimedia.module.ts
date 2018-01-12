@@ -6,6 +6,7 @@ import { MultimediaContentComponent } from '../multimedia/multimedia-content/mul
 import { MultimediaHeaderComponent } from '../multimedia/multimedia-header/multimedia-header.component';
 import { MultimediaSearchBarComponent } from '../multimedia/multimedia-search-bar/multimedia-search-bar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports:[
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     MultimediaContainerComponent,

@@ -9,7 +9,7 @@ app.on('ready', function () {
   win = new BrowserWindow({
       width: 1000, 
       height: 600,
-      frame: false,
+      frame: true,
     });
 
   // Specify entry point
@@ -25,7 +25,7 @@ app.on('ready', function () {
     win = null;
   });
 
-  win.setFullScreen(true);
+  // win.setFullScreen(true);
 
 });
 

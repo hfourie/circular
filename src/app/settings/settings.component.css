@@ -1,0 +1,38 @@
+
+
+.SettingsContainer{
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    /* width: 100%; */
+    margin-bottom: 10px;
+}
+
+.SettingsContainer:hover{
+-webkit-box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
+}
+
+.SettingsContainer h1{
+    color: white
+}
+
+.SettingsContainer{
+    margin-top:10px;
+    border-top: 1px solid gray;
+    color: white;
+}
+
+.SettingsContainerContent ul {
+    list-style: none
+}
+
+.SettingsContainerContent ul li{
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
+.playerActions{
+    margin-left: 5px;
+    cursor: pointer;
+}
