@@ -10,6 +10,7 @@ app.on('ready', function () {
       width: 1000, 
       height: 600,
       frame: true,
+      // frame: false,
     });
 
   // Specify entry point
@@ -18,7 +19,7 @@ app.on('ready', function () {
 
   // Show dev tools
   // Remove this line before distributing
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
   // Remove window once app is closed
   win.on('closed', function () {

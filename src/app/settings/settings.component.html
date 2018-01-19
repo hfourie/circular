@@ -1,52 +1,84 @@
-<div class="SettingsContainer col-xs-6">
-  <h1>SYSTEM AUDIO</h1>
 
-  <div class="SettingsContainerContent">
-    <div>
-        <label>Select theme background music</label>
-        <ul>
-          <li>
-            <label>Track 1</label>
-            <i class="playerActions fa fa-play" aria-hidden="true"></i>
-            <i class="playerActions fa fa-pause" aria-hidden="true"></i>
-            <i class="playerActions fa fa-stop" aria-hidden="true"></i>
-            
-          </li>
-          <li>
-              <label>Track 2</label>
-              <i class="fa fa-play" aria-hidden="true"></i>
-              <i class="fa fa-pause" aria-hidden="true"></i>
-              <i class="fa fa-stop" aria-hidden="true"></i>
-          </li>
-          <li>
-              <label>Track 3</label>
-              <i class="fa fa-play" aria-hidden="true"></i>
-              <i class="fa fa-pause" aria-hidden="true"></i>
-              <i class="fa fa-stop" aria-hidden="true"></i>
-          </li>
-          <li>
-              <label>Track 4</label>
-              <i class="fa fa-play" aria-hidden="true"></i>
-              <i class="fa fa-pause" aria-hidden="true"></i>
-              <i class="fa fa-stop" aria-hidden="true"></i>
-          </li>
-          <li>
-              <label>Track 5</label>
-              <i class="fa fa-play" aria-hidden="true"></i>
-              <i class="fa fa-pause" aria-hidden="true"></i>
-              <i class="fa fa-stop" aria-hidden="true"></i>
-          </li>
-        </ul>
-    </div>
-    <div>
-      <label>Mute theme background music</label>
-      <input type="checkbox">
+<div class="row">
+  <div class="col-xs-6">
+    <div class="SettingsContainer">
+      <h1>SYSTEM AUDIO</h1>
+      <div class="SettingsContainerContent">
+        <div>
+          <label>Select theme background music</label>
+          <ul>
+            <li class="col-xs-12">
+              <div class="col-xs-8">Alicks-Abandoned.mp3</div>
+              <div class="col-xs-3">
+                <i class="playerActions fa fa-step-backward" aria-hidden="true"></i>
+                <i class="playerActions fa fa-play" aria-hidden="true"></i>
+                <i class="playerActions fa fa-pause" aria-hidden="true"></i>
+                <i class="playerActions fa fa-stop" aria-hidden="true"></i>
+                <i class="playerActions fa fa-step-forward" aria-hidden="true"></i>
+              </div>
+              <div class="col-xs-1"><input type="checkbox"></div>
+            </li> 
+          </ul>
+        </div>
+        <div>
+        <label>Mute theme background music</label>
+        <input type="checkbox">
+        </div>
+      </div>
     </div>
   </div>
+  <div class="col-xs-6">
+    <div class="SettingsContainer">
+      <h1>WALLPAPERS</h1>
+      <div class="SettingsContainerContent">
+        <div>
+          <div class="col-xs-4">
+            <img class="wallpaper" src="../../assets/Themes/Background.jpg" />
+          </div>
+          <div class="col-xs-4">
+            <img class="wallpaper" src="../../assets/Themes/wallhaven-152793.jpg" />
+          </div>
+          <div class="col-xs-4">
+            <img class="wallpaper" src="../../assets/Themes/wallhaven-347980.jpg" />
+          </div>
+          <div class="col-xs-4">
+            <img class="wallpaper" src="../../assets/Themes/wallhaven-607612.png" />
+          </div>
+          <div class="col-xs-4">
+            <img class="wallpaper" src="../../assets/Themes/wallhaven-329291.jpg" />
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="SettingsContainerContent">
+        <label>Wallper Interval</label> 
 
+        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
 
+      </div>
+    </div>
+  </div>
 </div>
-<div class="SettingsContainer col-xs-6"><h1>WALLPAPERS</h1></div>
-<div class="SettingsContainer col-xs-6"><h1>ACCOUNTS</h1></div>
-<div class="SettingsContainer col-xs-6"><h1>OFFLINE MULTIMEDIA</h1></div>
-<div class="SettingsContainer col-xs-6"><h1>AUTHENTICATION</h1></div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="SettingsContainer"><h1>ACCOUNTS</h1></div>
+  </div>
+  <div class="col-xs-6">
+    <div class="SettingsContainer"><h1>OFFLINE MULTIMEDIA</h1></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="SettingsContainer"><h1>AUTHENTICATION</h1></div>
+  </div>
+</div>
+
+
+<div id="siri-container"></div>
+
+
+
+
+

@@ -14,6 +14,7 @@ import { Howl } from 'howler'
 export class SignInComponent {
 
   public user = new UserComponent('hardus@gmail.com','H@lcyon60*');
+  // public user = new UserComponent('hardus@gmail.com','');
   public rememberMe = false;
   private show = false;
 
@@ -26,11 +27,8 @@ export class SignInComponent {
     (err)=> {
     }
     );
+
     };
-
-
-              
-
 
 //  percentage: string
 //  password = 'H@lcyon60*';

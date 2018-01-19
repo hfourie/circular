@@ -1,10 +1,7 @@
 
-
 .SettingsContainer{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
-    /* width: 100%; */
-    margin-bottom: 10px;
 }
 
 .SettingsContainer:hover{
@@ -14,25 +11,50 @@ box-shadow: 0px 0px 53px 10px rgba(255,255,255,1);
 }
 
 .SettingsContainer h1{
-    color: white
+    color: white;
+    padding-left: 10px;
 }
 
-.SettingsContainer{
-    margin-top:10px;
+.SettingsContainerContent{
+    margin:10px;
+    padding-top: 10px;
     border-top: 1px solid gray;
     color: white;
 }
 
 .SettingsContainerContent ul {
-    list-style: none
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 10px;
+    
 }
 
 .SettingsContainerContent ul li{
     border-bottom: 1px solid white;
     padding: 5px;
+    cursor: pointer;
 }
 
 .playerActions{
     margin-left: 5px;
     cursor: pointer;
+}
+
+.row{
+    margin-bottom: 10px !important;
+}
+
+.wallpaper{
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid orangered;
+    cursor: pointer
+}
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+
+#siri-container{
+    background: rgba(0, 0, 0, 0.5);
 }
