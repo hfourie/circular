@@ -9,9 +9,11 @@ import { RouterModule } from '@angular/router';
 
 //Components
 import { AppComponent } from './app.component';
-import { SettingsComponent } from './settings/settings.component';
 import { HomeContentComponent} from './home-content/home-content.component';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
+import { SettingsComponent } from './settings/settings.component';
+//Settings Child Components
+import { settingsSystemAudioComponent } from './settings/settings-system-audio/settings-system-audio.component';
 
 //Routes
 import { appRoutes } from './app.routing';
@@ -35,6 +37,7 @@ import { ImagePanelComponent } from './panels/image-panel/image-panel.component'
   declarations: [
     AppComponent,
     SettingsComponent,
+    settingsSystemAudioComponent,
     HomeContentComponent,
     AuthenticatedUserComponent,
     HomeContentPanelComponent,

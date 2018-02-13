@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Howl } from 'howler';
 import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
 import { MenuService } from '../fw/services/menu.service';
 import { initialMenuItems } from './app.menu';
@@ -13,6 +13,17 @@ export class AppComponent {
   
   constructor (private frameworkConfigService: FrameworkConfigService,
                private menuService: MenuService) {
+
+              //   var sound = new Howl({
+              //     src: ['../../assets/multimedia/music/Alicks-Abandoned.mp3'],
+              //     loop: true,
+              // volume: 0.1,
+              //     html5 :true
+              //   });
+            
+              //   sound.play();
+
+
 
     let config:FrameworkConfigSettings = {
       socialIcons: [

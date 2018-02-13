@@ -38,15 +38,15 @@ export class ContentComponent implements OnInit {
 
     this.backgroundImg = this._sanitizer.bypassSecurityTrustStyle('url(' + this.wallpapers[0] + ')');
 
-    // let timer = Observable.timer(1000,10000);
-    // var _this = this;
-    // timer.subscribe(function(){
-    //   function getRandomInt(min, max) {
-    //     return Math.floor(Math.random() * (max - min + 1)) + min;
-    //   };
-    //   let wallpaperIndex = getRandomInt(0, _this.wallpapers.length - 1);
-    //   _this.backgroundImg = _this._sanitizer.bypassSecurityTrustStyle('url(' + _this.wallpapers[wallpaperIndex] + ')');
-    // });
+    let timer = Observable.timer(1000,10000);
+    var _this = this;
+    timer.subscribe(function(){
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      };
+      let wallpaperIndex = getRandomInt(0, _this.wallpapers.length - 1);
+      _this.backgroundImg = _this._sanitizer.bypassSecurityTrustStyle('url(' + _this.wallpapers[wallpaperIndex] + ')');
+    });
   }
 
   SetWallpaper(wallpaper){

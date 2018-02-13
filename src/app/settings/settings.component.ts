@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import * as SiriWave from 'siriwavejs';
 import { Observable } from 'rxjs';
 
@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+
+  @Output() messageEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -24,6 +26,9 @@ export class SettingsComponent implements OnInit {
     })
 
     siriWave.start();
+
+    this.messageEvent.emit("../../assets/Themes/SettingsWallpapers/wallhaven-137410.jpg");
+
   }
 
 
